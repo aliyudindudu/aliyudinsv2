@@ -16,8 +16,20 @@ export function Hero() {
             if (!containerRef.current || !nameRef.current) return;
 
             const letters = nameRef.current.querySelectorAll(`.${styles.letter}`);
+            const isMobile = window.innerWidth < 768;
 
-            // Create pinned scroll timeline
+            // On mobile: show content immediately without ScrollTrigger
+            if (isMobile) {
+                gsap.set(letters, { opacity: 1, y: 0 });
+                gsap.set(nameRef.current, {
+                    className: `${styles.name} ${styles.nameVisible} ${styles.nameFilled}`,
+                });
+                gsap.set(roleRef.current, { opacity: 1, y: 0 });
+                gsap.set(scrollIndicatorRef.current, { opacity: 1 });
+                return;
+            }
+
+            // Desktop: Create pinned scroll timeline
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: containerRef.current,
