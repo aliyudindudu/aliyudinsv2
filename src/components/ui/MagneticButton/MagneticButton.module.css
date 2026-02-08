@@ -1,0 +1,11 @@
+.magneticButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.15s ease-out;
+    cursor: pointer;
+}
+
+.magneticButton:hover {
+    filter: brightness(1.05);
+}

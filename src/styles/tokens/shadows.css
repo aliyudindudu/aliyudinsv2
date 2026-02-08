@@ -1,0 +1,35 @@
+/* Neo-Brutalist Shadows & Effects */
+:root {
+    /* Border widths */
+    --border-thin: 1px;
+    --border-medium: 2px;
+    --border-thick: 3px;
+    --border-brutal: 4px;
+
+    /* Border radius (Neo-Brutalist: minimal) */
+    --radius-none: 0;
+    --radius-sm: 2px;
+    --radius-md: 4px;
+    --radius-lg: 8px;
+    --radius-xl: 12px;
+    --radius-full: 9999px;
+
+    /* Offset Shadows (Neo-Brutalist signature) */
+    --shadow-brutal-sm: 4px 4px 0px var(--color-accent-primary);
+    --shadow-brutal-md: 6px 6px 0px var(--color-accent-primary);
+    --shadow-brutal-lg: 8px 8px 0px var(--color-accent-primary);
+
+    /* Motion */
+    --duration-instant: 100ms;
+    --duration-fast: 200ms;
+    --duration-normal: 300ms;
+    --duration-slow: 500ms;
+    --duration-slower: 800ms;
+
+    /* Easings */
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --ease-in: cubic-bezier(0.4, 0, 1, 1);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --ease-elastic: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
